@@ -5,10 +5,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-class-component';
 
+import { defineComponent } from 'vue'
 
-export default class LoginForm extends Vue {
-  msg!: string
-}
+export default defineComponent({
+  name: "RegisterForm",
+  data() {
+    return {
+      msg: "Register Form"
+    }
+  }
+})
 </script>

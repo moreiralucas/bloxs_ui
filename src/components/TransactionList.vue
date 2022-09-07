@@ -1,43 +1,58 @@
 <template>
   <v-card>
-    <v-btn
-      class="float-right mr-8 mt-8"
-      color="primary"
-      dense
-    >{{ msg }}
-    <v-icon right dark> mdi-folder-plus </v-icon>
-    </v-btn>
+    <v-card-title>Título teste</v-card-title>
+    <v-card-text>
+        <v-btn
+        class="mr-8 mt-8"
+        color="primary"
+        dense
+        >Depositar
+        <v-icon right dark> mdi-plus </v-icon>
+        </v-btn>
+        <v-btn
+        class="mr-8 mt-8"
+        color="primary"
+        dense
+        >Sacar
+        <v-icon right dark> mdi-minus </v-icon>
+        </v-btn>
+        <v-btn
+        class="mr-8 mt-8"
+        color="primary"
+        dense
+        >Bloquear Conta
+        <v-icon right dark> mdi-close-circle </v-icon>
+        </v-btn>
+        <v-spacer></v-spacer>
+    </v-card-text>
+    <v-card-text>
+    <v-data-table>
+        <tr>
+              <td>Teste TD 1.1</td>
+              <td>Teste TD 1.2</td>
+        </tr>
+        <tr>
+              <td>Teste TD 2.1</td>
+              <td>Teste TD 2.2</td>
+        </tr>
+        </v-data-table>
+    </v-card-text>
   </v-card>
+
 </template>
 <style lang="scss" scoped></style>
 <script lang="ts">
 
-import { Options, Vue } from 'vue-class-component';
+import { defineComponent } from 'vue'
 
-@Options({
-  props: {
-    msg: String
-  }
+
+export default defineComponent({
+    name: "TransactionList",
+
+    data() {
+        return {
+            msg: "Transaction List Button",
+        }
+    }
 })
-export default class TransactionList extends Vue {
-  msg!: string
-}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
