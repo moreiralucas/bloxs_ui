@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>Título teste</v-card-title>
+    <v-card-title>Extrato</v-card-title>
     <v-card-text>
         <v-btn
         class="mr-8 mt-8"
@@ -11,14 +11,14 @@
         </v-btn>
         <v-btn
         class="mr-8 mt-8"
-        color="primary"
+        color="warning"
         dense
         >Sacar
         <v-icon right dark> mdi-minus </v-icon>
         </v-btn>
         <v-btn
-        class="mr-8 mt-8"
-        color="primary"
+        class="float-right mr-8 mt-8"
+        color="error"
         dense
         >Bloquear Conta
         <v-icon right dark> mdi-close-circle </v-icon>
@@ -26,7 +26,7 @@
         <v-spacer></v-spacer>
     </v-card-text>
     <v-card-text>
-    <v-data-table>
+        <v-data-table>
         <tr>
               <td>Teste TD 1.1</td>
               <td>Teste TD 1.2</td>
