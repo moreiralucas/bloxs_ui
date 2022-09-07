@@ -5,6 +5,7 @@ export type TransactionModel = {
     valor: number;
 };
 
+
 export type AccountModel = {
     data_criacao: Date | string;
     flag_ativo: boolean;
@@ -14,4 +15,7 @@ export type AccountModel = {
     saldo: number;
     tipo_conta: number;
 };
-  
+
+export type BalanceModel = {
+    saldo: number;
+};

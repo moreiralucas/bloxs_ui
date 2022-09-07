@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { AccountModel, TransactionModel } from "./models";
+import { AccountModel, TransactionModel, BalanceModel } from "./models";
 
 const env = process.env.VUE_APP_ENVIRONMENT || 'dev';
 
@@ -25,7 +25,7 @@ const services = {
     getBalanceByID: async (
         id_account: number | string | null,
         config: AxiosRequestConfig = {}
-    ): Promise<AxiosResponse<AccountModel>> => {
+    ): Promise<AxiosResponse<BalanceModel>> => {
         const url = `/account/${id_account}/balance`;
         return await http.get(url, config);
     },

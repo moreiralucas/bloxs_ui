@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>Extrato</v-card-title>
+    <v-card-title>{{title}}</v-card-title>
     <v-card-text>
         <v-btn
         class="mr-8 mt-8"
@@ -24,6 +24,9 @@
         <v-icon right dark> mdi-close-circle </v-icon>
         </v-btn>
         <v-spacer></v-spacer>
+    </v-card-text>
+    <v-card-text>
+    Saldo atual: R$ {{saldo}}
     </v-card-text>
     <v-card-text>
         <EasyDataTable
@@ -55,13 +58,13 @@ export type SelectOptionItem = {
 
 export default defineComponent({
     name: "TransactionList",
-    setup() {},
     data() {
         return {
-            msg: "Transaction List Button",
+            title: "Extrato",
         }
     },
     props: {
+        saldo: String,
         headers: Array,
         items: Array
     },
