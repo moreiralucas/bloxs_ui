@@ -26,16 +26,10 @@
         <v-spacer></v-spacer>
     </v-card-text>
     <v-card-text>
-        <v-data-table>
-        <tr>
-              <td>Teste TD 1.1</td>
-              <td>Teste TD 1.2</td>
-        </tr>
-        <tr>
-              <td>Teste TD 2.1</td>
-              <td>Teste TD 2.2</td>
-        </tr>
-        </v-data-table>
+        <EasyDataTable
+            :headers="headers"
+            :items="items"
+        />
     </v-card-text>
   </v-card>
 
@@ -44,15 +38,35 @@
 <script lang="ts">
 
 import { defineComponent } from 'vue'
+import type { Header, Item } from "vue3-easy-data-table";
 
+
+export type SelectOption = {
+  value: string;
+  text: string;
+};
+
+export type SelectOptionItem = {
+  name: string;
+  height: number;
+  weight: number;
+  age: number;
+};
 
 export default defineComponent({
     name: "TransactionList",
-
+    setup() {},
     data() {
         return {
             msg: "Transaction List Button",
         }
+    },
+    props: {
+        headers: Array,
+        items: Array
+    },
+    mounted() {
+        // this.$props.foo // how to type `this` out of this context?
     }
 })
 </script>

@@ -1,16 +1,17 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { AccountModel } from "./models";
+import { AccountModel, TransactionModel } from "./models";
 
-let env = process.env.VUE_APP_ENVIRONMENT;
+const env = process.env.VUE_APP_ENVIRONMENT || 'dev';
 
 const urls: Record<string, string> = {
-    dev: "http://localhost:8080",
-    prod: "http://localhost:8080",
+    dev: "http://localhost:5000",
+    prod: "http://localhost:5000",
 };
 
-let http = axios.create({
+axios.defaults.baseURL = urls[env];
+const http = axios.create({
     baseURL: urls[env],
-    headers: {},
+    headers: {'X-Requested-With': 'XMLHttpRequest'},
 });
 
 const services = {
@@ -45,7 +46,7 @@ const services = {
     extractAccountByID: async (
         id_account: number | string | null,
         config: AxiosRequestConfig = {}
-    ): Promise<AxiosResponse<AccountModel>> => {
+    ): Promise<AxiosResponse<TransactionModel[]>> => {
         const url = `/account/${id_account}/extract`;
         return await http.get(url, config);
     },

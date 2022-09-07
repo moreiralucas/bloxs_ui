@@ -6123,7 +6123,14 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^3.2.13:
+vue3-easy-data-table@^1.4.17:
+  version "1.4.17"
+  resolved "https://registry.yarnpkg.com/vue3-easy-data-table/-/vue3-easy-data-table-1.4.17.tgz#6c35b9769add6073ebaa1f5bc3a82f1075f28b4a"
+  integrity sha512-LYEj8PPKq28g8UdpQaogkr/5n8gEXmeHrKsVwVh7uS2YtooJeSXEIiH4DF+z4OoZ1GJGeEzWhbx/uy44niaUZw==
+  dependencies:
+    vue "^3.2.25"
+
+vue@^3.2.13, vue@^3.2.25:
   version "3.2.38"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.38.tgz#cda3a414631745b194971219318a792dbbccdec0"
   integrity sha512-hHrScEFSmDAWL0cwO4B6WO7D3sALZPbfuThDsGBebthrNlDxdJZpGR3WB87VbjpPh96mep1+KzukYEhpHDFa8Q==
