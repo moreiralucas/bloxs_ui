@@ -1,17 +1,16 @@
 <template>
   <div class="home">
-
-    <TransactionListTransaction msg="Extrato" />
+    <RegisterForm msg="Welcome to Register Page"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import TransactionListTransaction from '@/components/TransactionList.vue';
+import RegisterForm from '@/components/RegisterForm.vue'; // @ is an alias to /src
 
 @Options({
   components: {
-    TransactionListTransaction,
+    RegisterForm,
   },
 })
 export default class HomeView extends Vue {}

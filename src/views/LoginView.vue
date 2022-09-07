@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-
-    <TransactionListTransaction msg="Extrato" />
+    <LoginForm/>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import TransactionListTransaction from '@/components/TransactionList.vue';
+import LoginForm from '@/components/LoginForm.vue';
+
 
 @Options({
   components: {
-    TransactionListTransaction,
+    LoginForm,
   },
 })
 export default class HomeView extends Vue {}
