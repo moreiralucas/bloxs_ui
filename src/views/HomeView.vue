@@ -6,13 +6,17 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import { defineComponent } from 'vue';
 import TransactionListTransaction from '@/components/TransactionList.vue';
 
-@Options({
+// Components
+import HelloWorld from '../components/HelloWorld.vue';
+
+export default defineComponent({
+  name: 'HomeView',
+
   components: {
     TransactionListTransaction,
   },
-})
-export default class HomeView extends Vue {}
+});
 </script>
