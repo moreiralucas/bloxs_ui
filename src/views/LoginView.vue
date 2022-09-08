@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="login">
     <LoginForm/>
   </div>
 </template>
@@ -14,5 +14,5 @@ import LoginForm from '@/components/LoginForm.vue';
     LoginForm,
   },
 })
-export default class HomeView extends Vue {}
+export default class LoginView extends Vue {}
 </script>

@@ -9,10 +9,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "RegisterForm",
+  name: "CreateAccountForm",
   data() {
     return {
-      msg: "Register Form"
+      msg: "Create Account Form"
     }
   }
 })

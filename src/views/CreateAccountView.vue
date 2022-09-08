@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <RegisterForm msg="Welcome to Register Page"/>
+    <CreateAccountForm msg="Welcome to Create Account Page"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import RegisterForm from '@/components/RegisterForm.vue'; // @ is an alias to /src
+import CreateAccountForm from '@/components/CreateAccountForm.vue'; // @ is an alias to /src
 
 @Options({
   components: {
-    RegisterForm,
+    CreateAccountForm,
   },
 })
 export default class HomeView extends Vue {}
