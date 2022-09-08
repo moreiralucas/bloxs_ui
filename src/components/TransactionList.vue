@@ -6,12 +6,14 @@
         class="mr-8 mt-8"
         color="primary"
         dense
+        @click="depositar"
         >Depositar
         <v-icon right dark> mdi-plus </v-icon>
         </v-btn>
         <v-btn
         class="mr-8 mt-8"
         color="warning"
+        @click="sacar"
         dense
         >Sacar
         <v-icon right dark> mdi-minus </v-icon>
@@ -20,6 +22,7 @@
         class="float-right mr-8 mt-8"
         color="error"
         dense
+
         >Bloquear Conta
         <v-icon right dark> mdi-close-circle </v-icon>
         </v-btn>
@@ -35,11 +38,12 @@
         />
     </v-card-text>
   </v-card>
-
+  <DialogModal :title="sacarLabel" />
 </template>
 <style lang="scss" scoped></style>
 <script lang="ts">
 
+import DialogModal from '@/components/DialogModal.vue';
 import { defineComponent } from 'vue'
 import type { Header, Item } from "vue3-easy-data-table";
 
@@ -61,6 +65,7 @@ export default defineComponent({
     data() {
         return {
             title: "Extrato",
+            sacarLabel: "Você deseja sacar o dinheiro?"
         }
     },
     props: {
@@ -70,6 +75,17 @@ export default defineComponent({
     },
     mounted() {
         // this.$props.foo // how to type `this` out of this context?
-    }
+    },
+    methods: {
+    sacar(){
+      console.log("sacando o dinheiro");
+    },
+    depositar(){
+      console.log("depositando o dinheiro");
+    },
+    bloquear(){
+      console.log("depositando o dinheiro");
+    },      
+    },
 })
 </script>
